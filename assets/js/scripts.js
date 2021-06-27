@@ -4,14 +4,12 @@
     todaysDate.innerHTML = date;
 
     var currentTime = document.querySelector('#currentTime');
-    var hours = moment().format('Hmm')
-    var seconds = moment().format('ss')
-    currentTime.innerHTML = hours + " hours " + seconds + " seconds"
+    var hours = moment().format('hh:mm:ss a')
+    currentTime.innerHTML = hours
     // update time function
     var updateClock = setInterval(function(){
-        var currentHour = moment().format('Hmm');
-        var currentSecond = moment().format('ss')
-        currentTime.innerHTML = currentHour + " hours " + currentSecond + " seconds"
+        var currentHour = moment().format('hh:mm:ss a');
+        currentTime.innerHTML = currentHour
     }, 1000);
 // end date and clock
 
@@ -29,15 +27,10 @@ var task1600 = document.getElementById('1600Task');
 var task1700 = document.getElementById('1700Task');
 
 // check for saved tasks on load
-function checktasks(){
-    var savedtasks = localStorage.getItem('tasks');
-    // no saved tasks creates array for new ones
-    if (savedtasks === null){
-        console.log('no saved tasks')
-        savedtasks = []
-    } else {
-        loadTasks();
-    }
+if (localStorage.getItem('tasks') === null){
+    console.log('nothing saved');
+} else {
+    loadTasks();
 };
 
 // loadTask function
@@ -57,4 +50,17 @@ function loadTasks(){
     task1600.textContent = tasks[9];
     task1700.textContent = tasks[10];
 }
+
+// color changes based on scheduled time vs momentJS
+setInterval(function(){
+},1000)
+
+// save task button function
+function saveTask(){
+    console.log('savetask activated')
+};
+
+// click listener for save buttons
+var saveBtn = document.querySelector('.storeBtn');
+saveBtn.addEventListener('click',saveTask());
 

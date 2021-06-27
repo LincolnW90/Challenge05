@@ -7,125 +7,118 @@
     <title>Day Planner</title>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"/>
+    <link  rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"/>
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
+
 <body>
-    <header>
+    <header class="jumbotron">
         <h1 class="">Work Day Scheduler</h1>
-        <span class="">A simple calendar app for scheduling your day.</span><br>
+        <p class="">A simple calendar app for scheduling your day.</p>
         <!-- day/time -->
-        <span id="currentDate"></span><br>
-        <span id="currentTime"></span>
+        <p id="currentDate"></p>
+        <p id="currentTime"></p>
     </header>
 
     <main class="row mx-auto justify-content-center">
         <!-- begin containers -->
-        <div class="taskContainer col-11">
+        <div class="taskContainer col-10">
             <!-- by the hour blocks -->
-            <div class="taskHour row" id="0700">
-                <div class="hour col-1">0700</div>
-                <textarea class="col-10" name="task" id="0700Task" placeholder="No task scheduled"></textarea>
-                <div class="btnContainer col-1">
-                    <button class="storeBtn">Save Task 💾</button>
-                    <button class="clearBtn">Clear Task 🧹</button>
+            <div class="row">
+                <div class="hour-box col-1">
+                    <p class="hour">7am</p>
                 </div>
+                <textarea id="7am" class="col-10" placeholder="No task this hour"></textarea>
+                <button type="button" class="saveBtn col-1"><i class="fas fa-cloud-upload-alt"></i></button>
             </div>
-            <div class="taskHour row" id="0800">
-                <div class="hour col-1">0800</div>
-                <textarea class="col-10" name="task" id="0800Task" placeholder="No task scheduled"></textarea>
-                <div class="btnContainer col-1">
-                    <button class="storeBtn">Save Task 💾</button>
-                    <button class="clearBtn">Clear Task 🧹</button>
+            <div class="row">
+                <div class="hour-box col-1">
+                    <p class="hour">8am</p>
                 </div>
+                <textarea id="8am" class="col-10" placeholder="No task this hour"></textarea>
+                <button type="button" class="saveBtn col-1"><i class="fas fa-cloud-upload-alt"></i></button>
             </div>
-            <div class="taskHour row" id="0900">
-                <div class="hour col-1">0900</div>
-                <textarea class="col-10" name="task" id="0900Task" placeholder="No task scheduled"></textarea>
-                <div class="btnContainer col-1">
-                    <button class="storeBtn">Save Task 💾</button>
-                    <button class="clearBtn">Clear Task 🧹</button>
+            <div class="row">
+                <div class="hour-box col-1">
+                    <p class="hour">9am</p>
                 </div>
+                <textarea id="9am" class="col-10" placeholder="No task this hour"></textarea>
+                <button type="button" class="saveBtn col-1"><i class="fas fa-cloud-upload-alt"></i></button>
             </div>
-            <div class="taskHour row" id="1000">
-                <div class="hour col-1">1000</div>
-                <textarea class="col-10" name="task" id="1000Task" placeholder="No task scheduled"></textarea>
-                <div class="btnContainer col-1">
-                    <button class="storeBtn">Save Task 💾</button>
-                    <button class="clearBtn">Clear Task 🧹</button>
+            <div class="row">
+                <div class="hour-box col-1">
+                    <p class="hour">10am</p>
                 </div>
+                <textarea id="10am" class="col-10" placeholder="No task this hour"></textarea>
+                <button type="button" class="saveBtn col-1"><i class="fas fa-cloud-upload-alt"></i></button>
             </div>
-            <div class="taskHour row" id="1100">
-                <div class="hour col-1">1100</div>
-                <textarea class="col-10" name="task" id="1100Task" placeholder="No task scheduled"></textarea>
-                <div class="btnContainer col-1">
-                    <button class="storeBtn">Save Task 💾</button>
-                    <button class="clearBtn">Clear Task 🧹</button>
+            <div class="row">
+                <div class="hour-box col-1">
+                    <p class="hour">11am</p>
                 </div>
+                <textarea id="11am" class="col-10" placeholder="No task this hour"></textarea>
+                <button type="button" class="saveBtn col-1"><i class="fas fa-cloud-upload-alt"></i></button>
             </div>
-            <div class="taskHour row" id="1200">
-                <div class="hour col-1">1200</div>
-                <textarea class="col-10" name="task" id="1200Task" placeholder="No task scheduled"></textarea>
-                <div class="btnContainer col-1">
-                    <button class="storeBtn">Save Task 💾</button>
-                    <button class="clearBtn">Clear Task 🧹</button>
+            <div class="row">
+                <div class="hour-box col-1">
+                    <p class="hour">12pm</p>
                 </div>
+                <textarea id="12pm" class="col-10" placeholder="No task this hour"></textarea>
+                <button type="button" class="saveBtn col-1"><i class="fas fa-cloud-upload-alt"></i></button>
             </div>
-            <div class="taskHour row" id="1300">
-                <div class="hour col-1">1300</div>
-                <textarea class="col-10" name="task" id="1300Task" placeholder="No task scheduled"></textarea>
-                <div class="btnContainer col-1">
-                    <button class="storeBtn">Save Task 💾</button>
-                    <button class="clearBtn">Clear Task 🧹</button>
+            <div class="row">
+                <div class="hour-box col-1">
+                    <p class="hour">1pm</p>
                 </div>
+                <textarea id="1pm" class="col-10" placeholder="No task this hour"></textarea>
+                <button type="button" class="saveBtn col-1"><i class="fas fa-cloud-upload-alt"></i></button>
             </div>
-            <div class="taskHour row" id="1400">
-                <div class="hour col-1">1400</div>
-                <textarea class="col-10" name="task" id="1400Task" placeholder="No task scheduled"></textarea>
-                <div class="btnContainer col-1">
-                    <button class="storeBtn">Save Task 💾</button>
-                    <button class="clearBtn">Clear Task 🧹</button>
+            <div class="row">
+                <div class="hour-box col-1">
+                    <p class="hour">2pm</p>
                 </div>
+                <textarea id="2pm" class="col-10" placeholder="No task this hour"></textarea>
+                <button type="button" class="saveBtn col-1"><i class="fas fa-cloud-upload-alt"></i></button>
             </div>
-            <div class="taskHour row" id="1500">
-                <div class="hour col-1">1500</div>
-                <textarea class="col-10" name="task" id="1500Task" placeholder="No task scheduled"></textarea>
-                <div class="btnContainer col-1">
-                    <button class="storeBtn">Save Task 💾</button>
-                    <button class="clearBtn">Clear Task 🧹</button>
+            <div class="row">
+                <div class="hour-box col-1">
+                    <p class="hour">3pm</p>
                 </div>
+                <textarea id="3pm" class="col-10" placeholder="No task this hour"></textarea>
+                <button type="button" class="saveBtn col-1"><i class="fas fa-cloud-upload-alt"></i></button>
             </div>
-            <div class="taskHour row" id="1600">
-                <div class="hour col-1">1600</div>
-                <textarea class="col-10" name="task" id="1600Task" placeholder="No task scheduled"></textarea>
-                <div class="btnContainer col-1">
-                    <button class="storeBtn">Save Task 💾</button>
-                    <button class="clearBtn">Clear Task 🧹</button>
+            <div class="row">
+                <div class="hour-box col-1">
+                    <p class="hour">4pm</p>
                 </div>
+                <textarea id="4pm" class="col-10" placeholder="No task this hour"></textarea>
+                <button type="button" class="saveBtn col-1"><i class="fas fa-cloud-upload-alt"></i></button>
             </div>
-            <div class="taskHour row" id="1700">
-                <div class="hour col-1">1700</div>
-                <textarea class="col-10" name="task" id="1700Task" placeholder="No task scheduled"></textarea>
-                <div class="btnContainer col-1">
-                    <button class="storeBtn">Save Task 💾</button>
-                    <button class="clearBtn">Clear Task 🧹</button>
+            <div class="row">
+                <div class="hour-box col-1">
+                    <p class="hour">5pm</p>
                 </div>
+                <textarea id="5pm" class="col-10" placeholder="No task this hour"></textarea>
+                <button type="button" class="saveBtn col-1"><i class="fas fa-cloud-upload-alt"></i></button>
             </div>
-            <div class="taskHour row" id="1800">
-                <div class="hour col-1">1800</div>
-                <textarea class="col-10" name="task" id="1800Task" placeholder="No task scheduled"></textarea>
-                <div class="btnContainer col-1">
-                    <button class="storeBtn">Save Task 💾</button>
-                    <button class="clearBtn">Clear Task 🧹</button>
+            <div class="row">
+                <div class="hour-box col-1">
+                    <p class="hour">6pm</p>
                 </div>
+                <textarea id="6pm" class="col-10" placeholder="No task this hour"></textarea>
+                <button type="button" class="saveBtn col-1"><i class="fas fa-cloud-upload-alt"></i></button>
             </div>
-            <div class="taskHour row" id="1900">
-                <div class="hour col-1">1900</div>
-                <textarea class="col-10" name="task" id="1900Task" placeholder="No task scheduled"></textarea>
-                <div class="btnContainer col-1">
-                    <button class="storeBtn">Save Task 💾</button>
-                    <button class="clearBtn">Clear Task 🧹</button>
+            <div class="row">
+                <div class="hour-box col-1">
+                    <p class="hour">7pm</p>
                 </div>
+                <textarea id="7pm" class="col-10" placeholder="No task this hour"></textarea>
+                <button type="button" class="saveBtn col-1"><i class="fas fa-cloud-upload-alt"></i></button>
             </div>
+
+
+
         </div>
     </main>
 
