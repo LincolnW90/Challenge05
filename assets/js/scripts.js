@@ -30,48 +30,51 @@ var task1900 = document.getElementById('1900');
 
 // load saved tasks
 function loadTasks(){
-    var saved0700 = JSON.parse(localStorage.getItem('0700Task'));
-    task0700.textContent = saved0700;
+    console.log('task load test')
+    var saved0700 = JSON.parse(localStorage.getItem("7am"));
+    task0700.innerHTML = saved0700;
 
-    var saved0800 = JSON.parse(localStorage.getItem('0800Task'));
-    task0800.textContent = saved0800;
+    var saved0800 = JSON.parse(localStorage.getItem('8am'));
+    task0800.innerHTML = saved0800;
 
-    var saved0900 = JSON.parse(localStorage.getItem('0900Task'));
-    task0900.textContent = saved0900;
+    var saved0900 = JSON.parse(localStorage.getItem('9am'));
+    task0900.innerHTML = saved0900;
 
-    var saved1000 = JSON.parse(localStorage.getItem('1000Task'));
-    task1000.textContent = saved1000;
+    var saved1000 = JSON.parse(localStorage.getItem('10am'));
+    task1000.innerHTML = saved1000;
 
-    var saved1100 = JSON.parse(localStorage.getItem('1100Task'));
-    task1100.textContent = saved1100;
+    var saved1100 = JSON.parse(localStorage.getItem('11am'));
+    task1100.innerHTML = saved1100;
 
-    var saved1200 = JSON.parse(localStorage.getItem('1200Task'));
-    task1200.textContent = saved1200;
+    var saved1200 = JSON.parse(localStorage.getItem('12pm'));
+    task1200.innerHTML = saved1200;
 
-    var saved1300 = JSON.parse(localStorage.getItem('1300Task'));
-    task1300.textContent = saved1300;
+    var saved1300 = JSON.parse(localStorage.getItem('1pm'));
+    task1300.innerHTML = saved1300;
 
-    var saved1400 = JSON.parse(localStorage.getItem('1400Task'));
-    task1400.textContent = saved1400;
+    var saved1400 = JSON.parse(localStorage.getItem('2pm'));
+    task1400.innerHTML = saved1400;
 
-    var saved1500 = JSON.parse(localStorage.getItem('1500Task'));
-    task1500.textContent = saved1500;
+    var saved1500 = JSON.parse(localStorage.getItem('3pm'));
+    task1500.innerHTML = saved1500;
 
-    var saved1600 = JSON.parse(localStorage.getItem('1600Task'));
-    task1600.textContent = saved1600;
+    var saved1600 = JSON.parse(localStorage.getItem('4pm'));
+    task1600.innerHTML = saved1600;
 
-    var saved1700 = JSON.parse(localStorage.getItem('1700Task'));
-    task1700.textContent = saved1700;
+    var saved1700 = JSON.parse(localStorage.getItem('5pm'));
+    task1700.innerHTML = saved1700;
 
-    var saved1800 = JSON.parse(localStorage.getItem('1800Task'));
-    task1800.textContent = saved1800;
+    var saved1800 = JSON.parse(localStorage.getItem('6pm'));
+    task1800.innerHTML = saved1800;
 
-    var saved1900 = JSON.parse(localStorage.getItem('1900Task'));
-    task1900.textContent = saved1900;
+    var saved1900 = JSON.parse(localStorage.getItem('7pm'));
+    task1900.innerHTML = saved1900;
 }
 
 // color changes based on scheduled time vs momentJS
+var hour = moment().hours();
 function timeKeeper(){
+    console.log('timekeeper activate');
     $('.task-holder').each(function(){
         var timeTest = parseInt($(this).attr("id"));
         hour = parseInt(hour);
@@ -80,30 +83,37 @@ function timeKeeper(){
             $(this).addClass('past');
             $(this).removeClass('present');
             $(this).removeClass('future');
-        } else if (hour = timeTest) {
-            $(this).removeClass('past');
-            $(this).addClass('present');
-            $(this).removeClass('future');
         } else if (hour<timeTest) {
             $(this).removeClass('past');
             $(this).removeClass('present');
             $(this).addClass('future');
         } else {
-            console.log('invalid time somehow')
+            $(this).removeClass('past');
+            $(this).addClass('present');
+            $(this).removeClass('future');
         };
     });
 }
-// dynamic update colors every 5 minutes
-setInterval(function(){
-    timeKeeper();
-}, 300000)
 
 // save task button function
-function saveTask(){
-    console.log('savetask activated')
-};
+$('.saveBtn').on('click', function(){
+    userInput = $(this).siblings('.task-holder').val().trim();
+    taskHour = $(this).siblings('.hour-box').text().trim();
+    localStorage.setItem(taskHour, JSON.stringify(userInput));
+});
 
-// click listener for save buttons
-var saveBtn = document.querySelector('.storeBtn');
-saveBtn.addEventListener('click',saveTask());
+// clear calendar button
+$('.clearBtn').on('click', function(){
+    localStorage.clear()
+    loadTasks();
 
+})
+
+
+loadTasks();
+timeKeeper();
+
+// dynamic update background colors every 5 minutes
+setInterval(function(){
+    timeKeeper();
+}, 300000);
