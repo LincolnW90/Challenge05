@@ -72,10 +72,31 @@ function loadTasks(){
 
 // color changes based on scheduled time vs momentJS
 function timeKeeper(){
+    $('.task-holder').each(function(){
+        var timeTest = parseInt($(this).attr("id"));
+        hour = parseInt(hour);
 
-    
-
+        if (hour>timeTest) {
+            $(this).addClass('past');
+            $(this).removeClass('present');
+            $(this).removeClass('future');
+        } else if (hour = timeTest) {
+            $(this).removeClass('past');
+            $(this).addClass('present');
+            $(this).removeClass('future');
+        } else if (hour<timeTest) {
+            $(this).removeClass('past');
+            $(this).removeClass('present');
+            $(this).addClass('future');
+        } else {
+            console.log('invalid time somehow')
+        };
+    });
 }
+// dynamic update colors every 5 minutes
+setInterval(function(){
+    timeKeeper();
+}, 300000)
 
 // save task button function
 function saveTask(){
