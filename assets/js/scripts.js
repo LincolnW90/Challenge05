@@ -15,3 +15,20 @@
     }, 1000);
 // end date and clock
 
+// check for saved tasks on load
+function checktasks(){
+    var savedtasks = localStorage.getItem('tasks');
+    // no saved tasks creates array for new ones
+    if (!savedtasks){
+        console.log('no saved tasks')
+        savedtasks = []
+    } else {
+        loadTasks();
+    }
+};
+
+// loadTask function
+function loadTask(){
+    
+}
+
