@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day Planner</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <header>
+        <h1 class="col">Work Day Scheduler</h1>
+        <span class="col">A simple calendar app for scheduling your day.</span>
+        <!-- day/time -->
+        <span id="Time"></span>
+    </header>
+
+    <main class="row mx-auto">
+        <!-- begin containers -->
+        <div class="taskContainer col-10">
+            <!-- by the hour blocks -->
+            <div class="taskHour row" id="7am">
+                <div class="hour col-1">7am</div>
+                <textarea class="col-10" name="task" id="7amTask"></textarea>
+                <button class="storeBtn col-1"></button>
+            </div>
+
+        </div>
+    </main>
+
+
+    <!-- script links -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="./assets/js/scripts.js"></script>
+</body>
+</html>
