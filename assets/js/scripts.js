@@ -30,7 +30,6 @@ var task1900 = document.getElementById('19');
 
 // load saved tasks
 function loadTasks(){
-    console.log('task load test')
     var saved0700 = JSON.parse(localStorage.getItem("7am"));
     task0700.innerHTML = saved0700;
 
@@ -74,12 +73,9 @@ function loadTasks(){
 // color changes based on scheduled time vs momentJS
 var hour = moment().hours();
 function timeKeeper(){
-    console.log('timekeeper activate');
     $('.task-holder').each(function(){
         var timeTest = parseInt($(this).attr("id"));
         hour = parseInt(hour);
-        console.log(hour)
-        console.log(timeTest)
         if (hour>timeTest) {
             $(this).addClass('past');
             $(this).removeClass('present');
