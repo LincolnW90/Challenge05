@@ -40,7 +40,10 @@ textarea{
     padding: 10px;
 }
 .past{
-    background-color: blanchedalmond;
+    background-color: rgb(230, 222, 212);
+}
+.present{
+    background-color: rgb(209, 94, 117);
 }
 .future{
     background-color: rgb(147, 211, 147);
@@ -63,6 +66,9 @@ margin-top: 20px;
     color: white;
     border-radius: 5px;
     font-size: 30px;
+}
+.saveBtn i:hover{
+    color: black;
 }
 
 .row{
