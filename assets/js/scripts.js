@@ -14,19 +14,19 @@
 // end date and clock
 
 // variables for text boxes
-var task0700 = document.getElementById('0700');
-var task0800 = document.getElementById('0800');
-var task0900 = document.getElementById('0900');
-var task1000 = document.getElementById('1000');
-var task1100 = document.getElementById('1100');
-var task1200 = document.getElementById('1200');
-var task1300 = document.getElementById('1300');
-var task1400 = document.getElementById('1400');
-var task1500 = document.getElementById('1500');
-var task1600 = document.getElementById('1600');
-var task1700 = document.getElementById('1700');
-var task1800 = document.getElementById('1800');
-var task1900 = document.getElementById('1900');
+var task0700 = document.getElementById('07');
+var task0800 = document.getElementById('08');
+var task0900 = document.getElementById('09');
+var task1000 = document.getElementById('10');
+var task1100 = document.getElementById('11');
+var task1200 = document.getElementById('12');
+var task1300 = document.getElementById('13');
+var task1400 = document.getElementById('14');
+var task1500 = document.getElementById('15');
+var task1600 = document.getElementById('16');
+var task1700 = document.getElementById('17');
+var task1800 = document.getElementById('18');
+var task1900 = document.getElementById('19');
 
 // load saved tasks
 function loadTasks(){
@@ -78,7 +78,8 @@ function timeKeeper(){
     $('.task-holder').each(function(){
         var timeTest = parseInt($(this).attr("id"));
         hour = parseInt(hour);
-
+        console.log(hour)
+        console.log(timeTest)
         if (hour>timeTest) {
             $(this).addClass('past');
             $(this).removeClass('present');
