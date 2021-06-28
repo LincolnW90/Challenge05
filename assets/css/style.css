@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1;
+}
+
+/* jumbotron styles */
+.jumbotron{
+    text-align: center;
+    color: black;
+    border-bottom: black solid 15px;
+    height: 250px;
+    padding: 0;
+    margin-bottom: 20px;
+}
+.jumbotron h1{
+    font-size: 80px;
+}
+.jumbotron p{
+    font-size: 25px;
+}
+
+/* hour-box */
+.hour-box{
+    text-align: right;
+    border-radius: 10px;
+    border-top: dashed black 1px;
+    border-bottom: dashed black 1px;
+    padding-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+/* text box */
+textarea{
+    color: black;
+    font-size: 20px;
+    border-radius: 5px;
+    border: black solid 1px;
+    padding: 10px;
+}
+.past{
+    background-color: blanchedalmond;
+}
+.future{
+    background-color: rgb(147, 211, 147);
+}
+.clearBtn{
+    color: black;
+    border: hotpink 2px solid;
+    background-color: transparent;
+    border-radius: 10%;
+    padding: 15px;
+    font-size: 20px;
+}
+.clearBtn-holder{
+width: auto;
+text-align: center;
+margin-top: 20px;
+}
+.saveBtn{
+    background-color: mediumturquoise;
+    color: white;
+    border-radius: 5px;
+    font-size: 30px;
+}
+
+.row{
+    margin: 5px 0;
+}
+

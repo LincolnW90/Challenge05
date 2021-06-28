@@ -106,7 +106,6 @@ $('.saveBtn').on('click', function(){
 $('.clearBtn').on('click', function(){
     localStorage.clear()
     loadTasks();
-
 })
 
 
