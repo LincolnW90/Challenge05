@@ -2,7 +2,6 @@
     var todaysDate = document.querySelector('#currentDate');
     var date = moment().format('dddd, MMMM Do YYYY');
     todaysDate.innerHTML = date;
-
     var currentTime = document.querySelector('#currentTime');
     var hours = moment().format('hh:mm:ss a')
     currentTime.innerHTML = hours
